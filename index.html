@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.ssa Elena Rossi | Psicologa e Psicoterapeuta</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome per Icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        salvia: {
+                            50: '#f4f7f5',
+                            100: '#e3ebe5',
+                            200: '#c7d7cc',
+                            500: '#7a9e87',
+                            600: '#5c8069',
+                            800: '#394d40',
+                        },
+                        sabbia: {
+                            50: '#fcfaf7',
+                            100: '#f6f1e9',
+                            200: '#ebdccb',
+                            500: '#c5a382',
+                        },
+                        blusoft: {
+                            500: '#647a8e',
+                            800: '#2d3b45',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .custom-shadow {
+            box-shadow: 0 10px 30px -5px rgba(122, 158, 135, 0.15);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        .accordion-content.open {
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body class="font-sans text-blusoft-800 bg-sabbia-50 antialiased selection:bg-salvia-200">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-sabbia-50/90 backdrop-blur-md border-b border-salvia-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex flex-col">
+                <span class="font-serif text-xl sm:text-2xl font-semibold tracking-wide text-salvia-800">Dr.ssa Elena Rossi</span>
+                <span class="text-xs uppercase tracking-widest text-salvia-600 font-medium">Psicologa & Psicoterapeuta</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#chi-sono" class="text-sm font-medium hover:text-salvia-600 transition-colors">Chi Sono</a>
+                <a href="#servizi" class="text-sm font-medium hover:text-salvia-600 transition-colors">Aree di Intervento</a>
+                <a href="#come-funziona" class="text-sm font-medium hover:text-salvia-600 transition-colors">Come Funziona</a>
+                <a href="#faq" class="text-sm font-medium hover:text-salvia-600 transition-colors">FAQ</a>
+                <a href="#contatti" class="bg-salvia-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-salvia-800 transition-all shadow-sm hover:shadow-md">
+                    Prenota un Colloquio
+                </a>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-salvia-800 focus:outline-none p-2" aria-label="Apri menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-sabbia-50 border-b border-salvia-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#chi-sono" class="block text-base font-medium text-salvia-800 hover:text-salvia-600 py-2">Chi Sono</a>
+            <a href="#servizi" class="block text-base font-medium text-salvia-800 hover:text-salvia-600 py-2">Aree di Intervento</a>
+            <a href="#come-funziona" class="block text-base font-medium text-salvia-800 hover:text-salvia-600 py-2">Come Funziona</a>
+            <a href="#faq" class="block text-base font-medium text-salvia-800 hover:text-salvia-600 py-2">FAQ</a>
+            <a href="#contatti" class="block w-full text-center bg-salvia-600 text-white px-5 py-3 rounded-full text-base font-medium">
+                Prenota un Colloquio
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-16 md:py-24 bg-gradient-to-b from-sabbia-50 via-salvia-50/30 to-sabbia-50 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
+                
+                <div class="flex-1 space-y-6 text-center md:text-left">
+                    <span class="inline-block px-4 py-1.5 bg-salvia-100 text-salvia-800 rounded-full text-xs sm:text-sm font-medium tracking-wide">
+                        <i class="fa-solid fa-heart-pulse text-salvia-600 mr-1.5"></i> Spazio D'Ascolto & Benessere Emotivo
+                    </span>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight text-blusoft-800">
+                        Ritrova il tuo equilibrio e la serenità interiore.
+                    </h1>
+                    <p class="text-lg text-blusoft-500 font-light max-w-2xl leading-relaxed">
+                        Un percorso terapeutico personalizzato per superare momenti di difficoltà, ansia e cambiamento. Insieme, costruiamo uno spazio sicuro e privo di giudizio.
+                    </p>
+                    
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                        <a href="#contatti" class="w-full sm:w-auto text-center bg-salvia-600 text-white px-8 py-3.5 rounded-full font-medium hover:bg-salvia-800 transition-all shadow-lg hover:shadow-xl">
+                            Prenota una Consulenza <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="#chi-sono" class="w-full sm:w-auto text-center bg-white border border-salvia-200 text-salvia-800 px-8 py-3.5 rounded-full font-medium hover:bg-salvia-50 transition-all">
+                            Scopri il mio approccio
+                        </a>
+                    </div>
+
+                    <div class="pt-6 flex items-center justify-center md:justify-start gap-8 text-xs text-blusoft-500 border-t border-salvia-100/80">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-salvia-500 text-sm"></i>
+                            <span>Studio in Presenza</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-video text-salvia-500 text-sm"></i>
+                            <span>Sedute Online</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1 relative w-full max-w-md lg:max-w-lg">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" 
+                             alt="Dr.ssa Elena Rossi - Psicologa" 
+                             class="w-full h-[450px] object-cover"
+                             onerror="this.src='https://placehold.co/600x800/e3ebe5/394d40?text=Dr.ssa+Elena+Rossi'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blusoft-800/30 via-transparent to-transparent"></div>
+                    </div>
+                    
+                    <!-- Badge sovrapposto -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-salvia-100 hidden sm:flex items-center gap-3">
+                        <div class="w-12 h-12 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center text-xl font-serif">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-blusoft-800">Iscritta all'Ordine</p>
+                            <p class="text-xs text-blusoft-500">Albo Psicologi n. 12345</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sezione Chi Sono -->
+        <section id="chi-sono" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    
+                    <div class="space-y-6">
+                        <span class="text-salvia-600 uppercase text-xs font-bold tracking-widest">Chi Sono</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl text-blusoft-800">
+                            Dr.ssa Elena Rossi
+                        </h2>
+                        <p class="text-blusoft-500 leading-relaxed">
+                            Sono Psicologa e Psicoterapeuta specializzata in psicoterapia cognitivo-comportamentale e gestione del benessere emotivo. Credo fermamente che ogni persona possieda le risorse necessarie per affrontare i momenti di stallo, ma che a volte serva una guida esperta per farle emergere.
+                        </p>
+                        <p class="text-blusoft-500 leading-relaxed">
+                            Il mio lavoro si fonda sull'ascolto empatico, il rispetto dei tempi individuali e l'adozione di strumenti scientificamente validati. Offro uno spazio riservato dove potersi esprimere liberamente, senza la paura del giudizio.
+                        </p>
+
+                        <!-- Credenziali -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                            <div class="p-4 bg-sabbia-50 rounded-xl border border-sabbia-200">
+                                <h4 class="font-semibold text-salvia-800 mb-1"><i class="fa-solid fa-graduation-cap text-salvia-600 mr-2"></i> Formazione</h4>
+                                <p class="text-xs text-blusoft-500">Laurea Magistrale in Psicologia Clinica con Lode. Specializzazione in Psicoterapia.</p>
+                            </div>
+                            <div class="p-4 bg-sabbia-50 rounded-xl border border-sabbia-200">
+                                <h4 class="font-semibold text-salvia-800 mb-1"><i class="fa-solid fa-user-shield text-salvia-600 mr-2"></i> Etica e Trasparenza</h4>
+                                <p class="text-xs text-blusoft-500">Iscritta all'Albo degli Psicologi e vincolata al segreto professionale.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-salvia-50/50 p-8 sm:p-10 rounded-2xl border border-salvia-100 space-y-6">
+                        <h3 class="font-serif text-2xl text-salvia-800">Il mio approccio terapeutico</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check-circle text-salvia-600 mt-1"></i>
+                                <div>
+                                    <strong class="text-blusoft-800 block text-sm">Centrato sulla Persona</strong>
+                                    <span class="text-xs text-blusoft-500">Ogni percorso è unico e cucito su misura per le tue esigenze pratiche ed emotive.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check-circle text-salvia-600 mt-1"></i>
+                                <div>
+                                    <strong class="text-blusoft-800 block text-sm">Basato su Evidenze Scientifiche</strong>
+                                    <span class="text-xs text-blusoft-500">Utilizzo strategie e metodologie comprovate per garantire l'efficacia del percorso.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check-circle text-salvia-600 mt-1"></i>
+                                <div>
+                                    <strong class="text-blusoft-800 block text-sm">Obiettivi Condivisi</strong>
+                                    <span class="text-xs text-blusoft-500">Definiamo insieme la meta fin dai primi colloqui per monitorare progressi reali.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Servizi / Aree di Intervento -->
+        <section id="servizi" class="py-20 bg-sabbia-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-salvia-600 uppercase text-xs font-bold tracking-widest">Come Posso Aiutarti</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-blusoft-800 mt-2">Aree di Intervento</h2>
+                    <p class="text-blusoft-500 mt-4 text-sm sm:text-base">
+                        Supporto psicologico e psicoterapia mirati al superamento del disagio e al raggiungimento del benessere personale.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white p-8 rounded-2xl border border-salvia-100 hover:border-salvia-300 transition-all custom-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-salvia-100 text-salvia-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-wind"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-medium text-blusoft-800 mb-3">Ansia e Stress</h3>
+                            <p class="text-blusoft-500 text-sm leading-relaxed mb-4">
+                                Gestione di attacchi di panico, ansia generalizzata, stress lavorativo (burnout) e preoccupazioni oppressive quotidiane.
+                            </p>
+                        </div>
+                        <a href="#contatti" class="text-salvia-600 font-medium text-sm hover:text-salvia-800 inline-flex items-center gap-1 mt-4">
+                            Richiedi informazioni <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-8 rounded-2xl border border-salvia-100 hover:border-salvia-300 transition-all custom-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-salvia-100 text-salvia-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-medium text-blusoft-800 mb-3">Depressione e Umore</h3>
+                            <p class="text-blusoft-500 text-sm leading-relaxed mb-4">
+                                Percorsi di supporto per periodi di forte tristezza, apatia, calo di motivazione e momenti di transizione complessi.
+                            </p>
+                        </div>
+                        <a href="#contatti" class="text-salvia-600 font-medium text-sm hover:text-salvia-800 inline-flex items-center gap-1 mt-4">
+                            Richiedi informazioni <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white p-8 rounded-2xl border border-salvia-100 hover:border-salvia-300 transition-all custom-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-salvia-100 text-salvia-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-people-holding"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-medium text-blusoft-800 mb-3">Terapia di Coppia</h3>
+                            <p class="text-blusoft-500 text-sm leading-relaxed mb-4">
+                                Consulenza per migliorare la comunicazione, gestire i conflitti relazionali e affrontare fasi di crisi emotiva.
+                            </p>
+                        </div>
+                        <a href="#contatti" class="text-salvia-600 font-medium text-sm hover:text-salvia-800 inline-flex items-center gap-1 mt-4">
+                            Richiedi informazioni <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white p-8 rounded-2xl border border-salvia-100 hover:border-salvia-300 transition-all custom-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-salvia-100 text-salvia-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-seedling"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-medium text-blusoft-800 mb-3">Crescita Personale</h3>
+                            <p class="text-blusoft-500 text-sm leading-relaxed mb-4">
+                                Potenziamento dell'autostima, assertività, gestione delle emozioni e sviluppo della consapevolezza di sé.
+                            </p>
+                        </div>
+                        <a href="#contatti" class="text-salvia-600 font-medium text-sm hover:text-salvia-800 inline-flex items-center gap-1 mt-4">
+                            Richiedi informazioni <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="bg-white p-8 rounded-2xl border border-salvia-100 hover:border-salvia-300 transition-all custom-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-salvia-100 text-salvia-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-hands-holding-child"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-medium text-blusoft-800 mb-3">Supporto Genitoriale</h3>
+                            <p class="text-blusoft-500 text-sm leading-relaxed mb-4">
+                                Orientamento nelle sfide educative, affiancamento nelle tappe dello sviluppo dei figli e sfide della genitorialità.
+                            </p>
+                        </div>
+                        <a href="#contatti" class="text-salvia-600 font-medium text-sm hover:text-salvia-800 inline-flex items-center gap-1 mt-4">
+                            Richiedi informazioni <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="bg-white p-8 rounded-2xl border border-salvia-100 hover:border-salvia-300 transition-all custom-shadow flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-salvia-100 text-salvia-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-laptop-house"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-medium text-blusoft-800 mb-3">Consulenza Online</h3>
+                            <p class="text-blusoft-500 text-sm leading-relaxed mb-4">
+                                Sedute psicologiche a distanza via videochiamata, per chi viaggia spesso o preferisce la comodità da casa.
+                            </p>
+                        </div>
+                        <a href="#contatti" class="text-salvia-600 font-medium text-sm hover:text-salvia-800 inline-flex items-center gap-1 mt-4">
+                            Richiedi informazioni <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Come Funziona -->
+        <section id="come-funziona" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-salvia-600 uppercase text-xs font-bold tracking-widest">Il Percorso</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-blusoft-800 mt-2">Come Funziona</h2>
+                    <p class="text-blusoft-500 mt-4 text-sm sm:text-base">
+                        Semplici passaggi per iniziare il tuo percorso verso il benessere emotivo.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                    
+                    <!-- Step 1 -->
+                    <div class="text-center p-6 space-y-4">
+                        <div class="w-16 h-16 bg-salvia-100 text-salvia-800 rounded-full flex items-center justify-center text-2xl font-serif font-bold mx-auto">
+                            1
+                        </div>
+                        <h3 class="font-serif text-xl font-medium text-blusoft-800">Primo Contatto</h3>
+                        <p class="text-blusoft-500 text-sm leading-relaxed">
+                            Invia un messaggio o compila il modulo di prenotazione per concordare la data del primo colloquio.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="text-center p-6 space-y-4">
+                        <div class="w-16 h-16 bg-salvia-100 text-salvia-800 rounded-full flex items-center justify-center text-2xl font-serif font-bold mx-auto">
+                            2
+                        </div>
+                        <h3 class="font-serif text-xl font-medium text-blusoft-800">Colloquio Conoscitivo</h3>
+                        <p class="text-blusoft-500 text-sm leading-relaxed">
+                            Un incontro (in studio o online) per comprendere la tua domanda, analizzare i bisogni e definire gli obiettivi.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="text-center p-6 space-y-4">
+                        <div class="w-16 h-16 bg-salvia-100 text-salvia-800 rounded-full flex items-center justify-center text-2xl font-serif font-bold mx-auto">
+                            3
+                        </div>
+                        <h3 class="font-serif text-xl font-medium text-blusoft-800">Percorso Terapeutico</h3>
+                        <p class="text-blusoft-500 text-sm leading-relaxed">
+                            Incontri regolari orientati al cambiamento e al raggiungimento di una rinnovata serenità personale.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonianze / FAQ Section -->
+        <section id="faq" class="py-20 bg-salvia-50/40 border-t border-b border-salvia-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-salvia-600 uppercase text-xs font-bold tracking-widest">Domande Frequenti</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-blusoft-800 mt-2">FAQ & Trasparenza</h2>
+                    <p class="text-blusoft-500 mt-2 text-sm">
+                        Risposte chiare alle domande più comuni sulla terapia psicologica.
+                    </p>
+                </div>
+
+                <!-- Accordion FAQ -->
+                <div class="space-y-4">
+                    
+                    <div class="bg-white rounded-xl border border-salvia-100 overflow-hidden">
+                        <button class="accordion-btn w-full p-5 text-left font-serif text-lg font-medium text-blusoft-800 flex justify-between items-center focus:outline-none">
+                            <span>Quanto dura una seduta psicologica?</span>
+                            <i class="fa-solid fa-chevron-down text-salvia-600 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-sm text-blusoft-500">
+                            Una seduta individuale ha una durata di circa 50 minuti. Le sedute di coppia o di famiglia possono durare dai 60 ai 75 minuti a seconda delle esigenze specifiche concordate in precedenza.
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-salvia-100 overflow-hidden">
+                        <button class="accordion-btn w-full p-5 text-left font-serif text-lg font-medium text-blusoft-800 flex justify-between items-center focus:outline-none">
+                            <span>Come funziona la riservatezza e il segreto professionale?</span>
+                            <i class="fa-solid fa-chevron-down text-salvia-600 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-sm text-blusoft-500">
+                            Tutti i colloqui sono rigorosamente protetti dal segreto professionale (art. 11 del Codice Deontologico degli Psicologi Italiani). I tuoi dati e le tue informazioni personali non verranno mai condivisi con terzi.
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-salvia-100 overflow-hidden">
+                        <button class="accordion-btn w-full p-5 text-left font-serif text-lg font-medium text-blusoft-800 flex justify-between items-center focus:outline-none">
+                            <span>Le spese per la terapia sono detraibili?</span>
+                            <i class="fa-solid fa-chevron-down text-salvia-600 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-sm text-blusoft-500">
+                            Sì, le prestazioni psicologiche e psicoterapeutiche sono spese sanitarie e pertanto detraibili al 19% nella dichiarazione dei redditi (tramite pagamento tracciabile come bonifico o carta).
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-salvia-100 overflow-hidden">
+                        <button class="accordion-btn w-full p-5 text-left font-serif text-lg font-medium text-blusoft-800 flex justify-between items-center focus:outline-none">
+                            <span>Le sedute online sono efficaci quanto quelle in presenza?</span>
+                            <i class="fa-solid fa-chevron-down text-salvia-600 text-sm transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-sm text-blusoft-500">
+                            Numerosi studi scientifici dimostrano che la consulenza psicologica online possiede la medesima efficacia della terapia in studio, offrendo inoltre maggiore flessibilità di orari e azzerando i tempi di spostamento.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Contatti e Prenotazione -->
+        <section id="contatti" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Info Contatto -->
+                    <div class="space-y-8">
+                        <div>
+                            <span class="text-salvia-600 uppercase text-xs font-bold tracking-widest">Contatti</span>
+                            <h2 class="font-serif text-3xl sm:text-4xl text-blusoft-800 mt-2">Prenota la tua prima consulenza</h2>
+                            <p class="text-blusoft-500 mt-4 text-sm sm:text-base leading-relaxed">
+                                Compila il modulo o utilizza uno dei canali diretti per richiedere informazioni o fissare un appuntamento. Rispondo di norma entro 24 ore lavorative.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-blusoft-800 text-sm">Indirizzo Studio</h4>
+                                    <p class="text-sm text-blusoft-500">Via Roma 123, 20100 Milano (MI)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-blusoft-800 text-sm">Email</h4>
+                                    <p class="text-sm text-blusoft-500">info@drossaelenarossi.it</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-blusoft-800 text-sm">Telefono / WhatsApp</h4>
+                                    <p class="text-sm text-blusoft-500">+39 340 1234567</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Orari -->
+                        <div class="p-6 bg-sabbia-50 rounded-2xl border border-sabbia-200">
+                            <h4 class="font-serif text-lg font-medium text-salvia-800 mb-2">Orari di Ricevimento</h4>
+                            <p class="text-xs text-blusoft-500 leading-relaxed">
+                                Lunedì - Venerdì: 09:00 - 19:30<br>
+                                Sabato: 09:00 - 13:00 (Solo Online)<br>
+                                <em>Si riceve esclusivamente su appuntamento.</em>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Modulo Form -->
+                    <div class="bg-sabbia-50 p-8 sm:p-10 rounded-2xl border border-salvia-100 custom-shadow">
+                        <form id="contact-form" class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-blusoft-800 mb-2">Nome e Cognome *</label>
+                                <input type="text" id="name" required placeholder="Mario Rossi" class="w-full px-4 py-3 rounded-xl border border-salvia-200 focus:outline-none focus:ring-2 focus:ring-salvia-500 bg-white text-sm">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-blusoft-800 mb-2">Email *</label>
+                                    <input type="email" id="email" required placeholder="mario@esempio.it" class="w-full px-4 py-3 rounded-xl border border-salvia-200 focus:outline-none focus:ring-2 focus:ring-salvia-500 bg-white text-sm">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-xs font-semibold uppercase tracking-wider text-blusoft-800 mb-2">Telefono *</label>
+                                    <input type="tel" id="phone" required placeholder="+39 333 1234567" class="w-full px-4 py-3 rounded-xl border border-salvia-200 focus:outline-none focus:ring-2 focus:ring-salvia-500 bg-white text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="modalita" class="block text-xs font-semibold uppercase tracking-wider text-blusoft-800 mb-2">Modalità Preferita</label>
+                                <select id="modalita" class="w-full px-4 py-3 rounded-xl border border-salvia-200 focus:outline-none focus:ring-2 focus:ring-salvia-500 bg-white text-sm">
+                                    <option value="presenza">In Studio (Milano)</option>
+                                    <option value="online">Online (Videochiamata)</option>
+                                    <option value="indifferente">Indifferente</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-blusoft-800 mb-2">Messaggio (Opzionale)</label>
+                                <textarea id="message" rows="4" placeholder="Breve descrizione del motivo del contatto..." class="w-full px-4 py-3 rounded-xl border border-salvia-200 focus:outline-none focus:ring-2 focus:ring-salvia-500 bg-white text-sm"></textarea>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <input type="checkbox" id="privacy" required class="mt-1 accent-salvia-600 rounded">
+                                <label for="privacy" class="text-xs text-blusoft-500">
+                                    Acconsento al trattamento dei dati personali ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR).
+                                </label>
+                            </div>
+
+                            <button type="submit" class="w-full bg-salvia-600 text-white font-medium py-3.5 rounded-xl hover:bg-salvia-800 transition-all shadow-md">
+                                Invia Richiesta
+                            </button>
+
+                            <div id="form-feedback" class="hidden p-4 rounded-xl bg-salvia-100 text-salvia-800 text-xs text-center font-medium">
+                                Messaggio inviato con successo! Ti ricontatterò al più presto.
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blusoft-800 text-white py-12 border-t border-salvia-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <h3 class="font-serif text-2xl font-semibold text-salvia-100">Dr.ssa Elena Rossi</h3>
+                    <p class="text-xs text-salvia-200 mt-1">Psicologa e Psicoterapeuta - Albo Psicologi n. 12345</p>
+                </div>
+                <div class="flex space-x-6 text-salvia-200 text-lg">
+                    <a href="#" class="hover:text-white transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-white transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-white transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <hr class="border-blusoft-500/30">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-salvia-200/80 leading-relaxed">
+                <div>
+                    <p><strong>Note Legali:</strong> P.IVA 01234567890 | Studio di Psicologia Dr.ssa Elena Rossi. Le informazioni contenute in questo sito hanno scopo informativo e non sostituiscono un parere clinico professionale.</p>
+                </div>
+                <div class="md:text-right space-x-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                    <a href="#" class="hover:underline">Cookie Policy</a>
+                    <a href="#" class="hover:underline">Codice Deontologico</a>
+                </div>
+            </div>
+
+            <div class="text-center text-xs text-salvia-200/50 pt-4">
+                &copy; <span id="year"></span> Dr.ssa Elena Rossi. Tutti i diritti riservati.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Anno dinamico nel footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Menu Mobile Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Chiudi il menu mobile quando si clicca su un link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Accordion FAQ Logic
+        const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+        accordionBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+
+                // Chiudi gli altri
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    if (item !== content) {
+                        item.classList.remove('open');
+                        item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle corrente
+                content.classList.toggle('open');
+                if (content.classList.contains('open')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Gestione form di contatto
+        const form = document.getElementById('contact-form');
+        const feedback = document.getElementById('form-feedback');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            feedback.classList.remove('hidden');
+            form.reset();
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
