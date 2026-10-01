@@ -461,38 +461,40 @@
                             </p>
                         </div>
 
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center shrink-0">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-blusoft-800 text-sm">Indirizzo Studio</h4>
-                                    <p class="text-sm text-blusoft-500">Via Roma 123, 20100 Milano (MI)</p>
-                                </div>
-                            </div>
+                       <div class="space-y-4">
+    <!-- Indirizzo Studio -> Google Maps -->
+    <a href="https://www.google.com/maps/search/?api=1&query=Via+Roma+123+20100+Milano+MI" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 group">
+        <div class="w-10 h-10 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center shrink-0 group-hover:bg-salvia-200 transition-colors">
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div>
+            <h4 class="font-semibold text-blusoft-800 text-sm">Indirizzo Studio</h4>
+            <p class="text-sm text-blusoft-500 group-hover:underline">Via Roma 123, 20100 Milano (MI)</p>
+        </div>
+    </a>
 
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center shrink-0">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-blusoft-800 text-sm">Email</h4>
-                                    <p class="text-sm text-blusoft-500">info@drossaelenarossi.it</p>
-                                </div>
-                            </div>
+    <!-- Email -> Gmail Web -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@drossaelenarossi.it" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 group">
+        <div class="w-10 h-10 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center shrink-0 group-hover:bg-salvia-200 transition-colors">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div>
+            <h4 class="font-semibold text-blusoft-800 text-sm">Email</h4>
+            <p class="text-sm text-blusoft-500 group-hover:underline">info@drossaelenarossi.it</p>
+        </div>
+    </a>
 
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center shrink-0">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-blusoft-800 text-sm">Telefono / WhatsApp</h4>
-                                    <p class="text-sm text-blusoft-500">+39 340 1234567</p>
-                                </div>
-                            </div>
-                        </div>
-
+    <!-- Telefono -> WhatsApp -->
+    <a href="https://wa.me/393401234567" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 group">
+        <div class="w-10 h-10 bg-salvia-100 text-salvia-600 rounded-full flex items-center justify-center shrink-0 group-hover:bg-salvia-200 transition-colors">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+        <div>
+            <h4 class="font-semibold text-blusoft-800 text-sm">Telefono / WhatsApp</h4>
+            <p class="text-sm text-blusoft-500 group-hover:underline">+39 340 1234567</p>
+        </div>
+    </a>
+</div>
                         <!-- Orari -->
                         <div class="p-6 bg-sabbia-50 rounded-2xl border border-sabbia-200">
                             <h4 class="font-serif text-lg font-medium text-salvia-800 mb-2">Orari di Ricevimento</h4>
